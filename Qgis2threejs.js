@@ -1342,9 +1342,9 @@ Q3D.application
       if (fill_background && bgcolor === null) {
         // render "sky-like" background
         var grad = ctx.createLinearGradient(0, 0, 0, height);
-        grad.addColorStop(0, "#98c8f6");
-        grad.addColorStop(0.4, "#cbebff");
-        grad.addColorStop(1, "#f0f9ff");
+        grad.addColorStop(0, "#d9a836");
+        grad.addColorStop(0.4, "#d9a836");
+        grad.addColorStop(1, "#db9f12");
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, width, height);
       }
