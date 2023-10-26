@@ -1,7 +1,3 @@
-// (C) 2014 Minoru Akagi
-// SPDX-License-Identifier: MIT
-// https://github.com/minorua/Qgis2threejs
-
 "use strict";
 
 var Q3D = {
@@ -29,7 +25,7 @@ Q3D.Config = {
   orthoCamera: false,
   viewpoint: {      // z-up
     default: {      // assumed that origin is (0, 0, 0) and base extent width in 3D world coordinates is 1
-      pos: new THREE.Vector3(-1, -0.7, 0.06),
+      pos: new THREE.Vector3(0, -1, 0.05),
       lookAt: new THREE.Vector3()
     }
   },
@@ -44,10 +40,10 @@ Q3D.Config = {
       },
       {
         type: "directional",
-        color: 0xFFFFFF,
+        color: 0xffffff,
         intensity: 0.7,
-        azimuth: 135,   // azimuth of light, in degrees. default light azimuth of gdaldem hillshade is 315.
-        altitude: 60    // altitude angle in degrees.
+        azimuth: 90,   // azimuth of light, in degrees. default light azimuth of gdaldem hillshade is 315.
+        altitude: 45    // altitude angle in degrees.
       }
     ],
     point: [
@@ -1342,9 +1338,9 @@ Q3D.application
       if (fill_background && bgcolor === null) {
         // render "sky-like" background
         var grad = ctx.createLinearGradient(0, 0, 0, height);
-        grad.addColorStop(0, "#d9a836");
-        grad.addColorStop(0.4, "#d9a836");
-        grad.addColorStop(1, "#db9f12");
+        grad.addColorStop(0, "#98c8f6");
+        grad.addColorStop(0.4, "#cbebff");
+        grad.addColorStop(1, "#f0f9ff");
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, width, height);
       }
